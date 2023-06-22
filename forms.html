@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Page</title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+    <!--form = container for the form which specifies actions taken 
+        by the form.
+        attribute action = specifies where the data has to be sent when
+        submitting form. (shipping label)
+        attribute method = -->
+    <hr>
+    <form action="/tacos">
+        <!--elements within forms:
+            input = to enter something
+            type = specifies the kind of input for an specific input
+            placeholder = premade text to show before writing
+            name = attribute used to label data sent to database
+            required = obligatory to complete input-->
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="Enter your Name" name="username" required>
+        </div>
+        <div>
+            <label for="pass">Password: </label>
+            <!--minlength and maxlength to define number of characters need-->
+            <input type="password" name="pass" id="pass" placeholder="Enter password" minlength="8" maxlength="15">
+        </div>
+        <div>
+            <label for="col">Choose color: </label>
+            <input type="color" name="col" id="col">
+        </div>
+        <div>
+            <label for="today">Today's date: </label>
+            <input type="date" name="today_date" id="today">
+        </div>
+        <div>
+            <!--labels are needed to associate it with inputs-->
+            <label for="num">Choose number: </label>
+            <input type="number" name="num" id="num">
+        </div>
+        <br>
+        <!--Buttons in forms are related to the form action-->
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <h2>Form Search for Google</h2>
+    <!-- search form on google -->
+    <form action="https://www.google.com/search">
+        <input type="text" name="q" id="">
+        <button>Search</button>
+    </form>
+    <hr>
+    <h2>Form Search Youtube</h2>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query" id="">
+        <button>Search</button>
+    </form>
+    <hr>
+    <h2>Other kind of inputs</h2>
+    <form action="/tasty">
+        <h3>Checkbox</h3>
+        <input type="checkbox" name="agree_all" id="agree">
+        <label for="agree">I agree to answer</label>
+        <h3>Radio</h3>
+        <p>
+            <label for="sweet">Sweet</label>
+            <input type="radio" name="select" id="sweet" value="sweet">
+            <label for="sour">Sour</label>
+            <input type="radio" name="select" id="sour" value="sour">
+            <label for="bitter">Bitter</label>
+            <input type="radio" name="select" id="bitter" value="bitter">
+        </p>
+        <h3>Dropdown</h3>
+        <p>
+            <label for="pet-select">Choose your pet:</label>
+            <select name="pets" id="pet-select">
+                <option value="">Choose an option from the menu</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster">Hamster</option>
+                <option value="goldfish">Goldfish</option>
+                <option value="rabit">Rabit</option>
+            </select>
+        </p>
+        <hr>
+        <h3>Range</h3>
+        <p>
+            <label for="lovely">How much do you love your pet?</label>
+            <input type="range" name="love" id="lovely" min="1" max="10">
+        </p>
+        <hr>
+        <h3>Textarea</h3>
+        <p>
+            <label for="request">Any other question?</label><br>
+            <textarea name="question" id="request" cols="40" rows="15" placeholder="Type it here!">
+    </textarea>
+        </p>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="table.html">Go to Tables</a>
+</body>
+
+</html>
